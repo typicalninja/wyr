@@ -7,22 +7,22 @@ function getQuestion(options: { requestOptions: AxiosRequestConfig; } = { reques
 		axios.get(BASE_URL, options.requestOptions || {}).then((response) => {
 			const $ = load(response.data);
 			const questions: any = $('.option-text').contents();
-   			const counts: any = $('.count').contents();
+   			const votes: any = $('.count').contents();
 			
-			if(!questions || !counts || !questions.length || !counts.length) return reject('DATA_ERROR: Did not receive a valid response');
+			if(!questions || !votes || !questions.length || !votes.length) return reject('DATA_ERROR: Did not receive a valid response');
 
 			const Data = {
 				"blue": {
 					question: questions[0].data,
-					count: counts[0].data
+					votes: votes[0].data
 				},
 				"red": {
 					question: questions[1].data,
-					count: counts[1].data
+					votes: votes[1].data
 				},
 				"raw:": {
 					questions: questions,
-					counts: counts
+					votes: votes
 				}
 			}
 
