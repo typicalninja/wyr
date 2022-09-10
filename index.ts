@@ -1,10 +1,11 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { load } from 'cheerio';
-const BASE_URL = 'http://either.io/'
+const BASE_URL_HTTP = 'http://either.io/';
+const BASE_URL_HTTPS = 'https://either.io/';
 
-function getQuestion(options: { requestOptions: AxiosRequestConfig; } = { requestOptions: {} }) {
+function getQuestion(options: { requestOptions: AxiosRequestConfig; useHttps: boolean } = { requestOptions: {}, useHttps: true }) {
 	return new Promise((resolve, reject) => {
-		axios.get(BASE_URL, options.requestOptions || {}).then((response) => {
+		axios.get(options.useHttps === true ? BASE_URL_HTTPS : BASE_URL_HTTP, options.requestOptions || {}).then((response) => {
 			const $ = load(response.data);
 			const questions: any = $('.option-text').contents();
    			const votes: any = $('.count').contents();
@@ -27,7 +28,7 @@ function getQuestion(options: { requestOptions: AxiosRequestConfig; } = { reques
 			}
 
 			return resolve(Data);
-		})
+		}).catch(reject)
 	});
 }
 
