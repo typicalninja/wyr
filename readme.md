@@ -68,13 +68,8 @@ console.log(response)
 ## Other
 
 
-> [My github](https://github.com/typicalninja493)
-
-
-> [My discordBot](https://axixbot.cf)
+> [My github](https://github.com/typicalninja493) 
 
 
 > [Discord-Invite](https://discord.gg/9s52pz6nWX)
 
-
-> [My other discord for my bot](https://discord.gg/zAZ4fNu)
