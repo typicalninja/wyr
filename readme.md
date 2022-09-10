@@ -1,6 +1,6 @@
 # wyr
 
-> A simple (literally 1  file) package to get would-your-rather questions, mostly for personal use, but available for others use :)
+> A simple (literally 1  file) package to get would-your-rather questions, easy to use and small
 
 
 # Install
