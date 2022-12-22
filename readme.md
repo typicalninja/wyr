@@ -57,7 +57,7 @@ console.log(response)
 
 ## Support
 
-> as this is a small and simple package i don't expect any one to need any support with it, but if you need me i am always in my discord server ; )
+- I am available in my discord server
 
 > [Invite](https://discord.gg/9s52pz6nWX)
 
