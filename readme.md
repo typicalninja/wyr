@@ -1,3 +1,7 @@
+# 🚨 Deprecation Notice 🚨
+
+This package is deprecated, [ℹ see here for more information](https://github.com/typicalninja/wyr/issues/1)
+
 # wyr
 
 > A simple (literally 1  file) package to get would-your-rather questions, easy to use and small
